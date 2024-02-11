@@ -1,0 +1,34 @@
+{
+  "name": "drizzle",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "db:generate": "drizzle-kit generate:sqlite --schema=./schemas",
+    "db:instrospect": "drizzle-kit introspect:sqlite --schema=./schemas",
+    "db:push": "drizzle-kit push:sqlite",
+    "db:drop": "drizzle-kit drop",
+    "db:up": "drizzle-kit up:sqlite",
+    "db:check": "drizzle-kit check:sqlite",
+    "db:studio": "drizzle-kit studio --verbose",
+    "lint": "eslint . --ext .ts --max-warnings 0",
+    "lint:fix": "eslint . --ext .ts --max-warnings 0 --fix"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.4.3",
+    "@repo/eslint-config": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "dotenv": "^16.4.2",
+    "drizzle-orm": "^0.29.3",
+    "drizzle-zod": "latest",
+    "eslint-plugin-drizzle": "latest",
+    "typescript": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.14"
+  },
+  "main": "index.js",
+  "types": "index.d.ts"
+}

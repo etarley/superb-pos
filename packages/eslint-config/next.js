@@ -9,6 +9,7 @@ module.exports = {
     "prettier",
     require.resolve("@vercel/style-guide/eslint/next"),
     "eslint-config-turbo",
+    "plugin:drizzle/all"
   ],
   globals: {
     React: true,
@@ -18,7 +19,7 @@ module.exports = {
     node: true,
     browser: true,
   },
-  plugins: ["only-warn"],
+  plugins: ["only-warn", "eslint-plugin-drizzle"],
   settings: {
     "import/resolver": {
       typescript: {
@@ -31,5 +32,5 @@ module.exports = {
     ".*.js",
     "node_modules/",
   ],
-  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
+  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }]
 };
